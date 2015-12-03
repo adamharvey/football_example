@@ -116,7 +116,7 @@ public class CupCompetition {
 	
 	private void playMatch(FootballTeam team1, FootballTeam team2) {
 		// Play Match is not complete until someone wins...
-		Match match = new Match(team1,team2,allocateGoals(team1.getSkill(),team2.getSkill()),allocateGoals(team2.getSkill(),team2.getSkill()));
+		Match match = new Match(team1,team2,allocateGoals(team1.getSkill(),team2.getSkill()),allocateGoals(team2.getSkill(),team1.getSkill()));
 		if(match.getWinner() == null) { playMatch(team1,team2); }
 		else { matches.add(match); }
 	}
